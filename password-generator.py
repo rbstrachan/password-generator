@@ -34,7 +34,9 @@ while go_again:
       password += random.choice(charset)
     print("Password #" + str(i + 1) + ": " + password)
   
-  again = input("\nWould you like to [generate] another set of passwords, [change] the parameters or [quit]?").lower()
+  time.sleep(int(amount) * 0.1 + 1)
+  
+  again = input("\nWould you like to [generate] another " + str(amount) + " passwords, [change] the parameters or [quit]?").lower()
   if again == "quit" or again == "q":
     go_again = False
   elif again == "change" or again == "c":
